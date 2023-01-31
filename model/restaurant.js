@@ -19,6 +19,12 @@ const restaurantSchema = mongoose.Schema({
         unique:true,
         required:true
     },
+    forgetPasswordOtp:{
+        type:Number,
+    },
+    forgetPasswordOtpExpiresIn:{
+        type:Date
+    },
     address:{
         street:{
             type:String
@@ -35,6 +41,9 @@ const restaurantSchema = mongoose.Schema({
         pinCode:{
             type:String
         }
+    },
+    token:{
+        type:String
     }
   
 },{
